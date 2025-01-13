@@ -100,11 +100,11 @@ pc.script.createLoadingScreen(function (app) {
     };
 
     createCss();
-    showSplash();
+    //showSplash();
 
     app.on('preload:end', function () {
         app.off('preload:progress');
     });
-    app.on('preload:progress', setProgress);
-    app.on('start', hideSplash);
+    //app.on('preload:progress', setProgress);
+    //app.on('start', hideSplash);
 });
