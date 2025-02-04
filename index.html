@@ -79,7 +79,11 @@
         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
             container.className = "unity-mobile";
             config.devicePixelRatio = 1;
-
+        }
+        else {
+            canvas.style.width = "100%";
+            canvas.style.height = "100%";
+        }
 
             // Выключаем появление меню при правом клике мыши
             document.addEventListener('contextmenu', event => event.preventDefault());
