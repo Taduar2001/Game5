@@ -79,39 +79,39 @@
         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
             container.className = "unity-mobile";
             config.devicePixelRatio = 1;
-        
-
-        // Выключаем появление меню при правом клике мыши
-        document.addEventListener('contextmenu', event => event.preventDefault());
-
-        function FocusGame() {
-            window.focus();
-            canvas.focus();
-        }
-
-        window.addEventListener('pointerdown', () => {
-            FocusGame();
-        });
-        window.addEventListener('touchstart', () => {
-            FocusGame();
-        });
 
 
-        var script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-            createUnityInstance(canvas, config, (progress) => {
-                spinner.style.display = "none";
-                progressBarEmpty.style.display = "";
-                progressBarFull.style.width = `${100 * progress}%`;
-            }).then((unityInstance) => {
-                loadingCover.style.display = "none";
-            }).catch((message) => {
-                alert(message);
+            // Выключаем появление меню при правом клике мыши
+            document.addEventListener('contextmenu', event => event.preventDefault());
+
+            function FocusGame() {
+                window.focus();
+                canvas.focus();
+            }
+
+            window.addEventListener('pointerdown', () => {
+                FocusGame();
             });
-        };
+            window.addEventListener('touchstart', () => {
+                FocusGame();
+            });
 
-        document.body.appendChild(script);
+
+            var script = document.createElement("script");
+            script.src = loaderUrl;
+            script.onload = () => {
+                createUnityInstance(canvas, config, (progress) => {
+                    spinner.style.display = "none";
+                    progressBarEmpty.style.display = "";
+                    progressBarFull.style.width = `${100 * progress}%`;
+                }).then((unityInstance) => {
+                    loadingCover.style.display = "none";
+                }).catch((message) => {
+                    alert(message);
+                });
+            };
+
+            document.body.appendChild(script);
 
     </script>
 </body>
