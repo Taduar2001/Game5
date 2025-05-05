@@ -1,4 +1,4 @@
-window.ASSET_PREFIX = "";
+window.ASSET_PREFIX = "./meta/";
 window.SCRIPT_PREFIX = "";
 window.SCENE_PATH = "2224963.json";
 window.CONTEXT_OPTIONS = {
