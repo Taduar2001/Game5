@@ -7,6 +7,13 @@
     <link rel="manifest" href="./json/manifest.json">
     <style></style>
     <title>РПЛ-Game-1</title>
+    <script>
+        const originalLog = console.log;
+        console.log = (...args) => {
+            parent.window.postMessage({ type: 'log', idGame: 1, args: args }, '*')
+            originalLog(...args)
+        };
+    </script>
     <script src="./js/playcanvas-stable.min.js"></script>
     <script src="./build/__settings__.js"></script>
 </head>
