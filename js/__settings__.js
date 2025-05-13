@@ -1,6 +1,6 @@
 window.ASSET_PREFIX = "./js/";
 window.SCRIPT_PREFIX = "";
-window.SCENE_PATH = "./json/2224963.json";
+window.SCENE_PATH = "././json/2224963.json";
 window.CONTEXT_OPTIONS = {
     'antialias': true,
     'alpha': false,
