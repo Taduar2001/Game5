@@ -18,4 +18,5 @@ window.INPUT_SETTINGS = {
 };
 pc.script.legacy = false;
 window.PRELOAD_MODULES = [
+    {'moduleName' : 'DracoDecoderModule', 'glueUrl' : 'files/assets/230294034/1/draco.wasm.js', 'wasmUrl' : 'files/assets/230294035/1/draco.wasm.wasm', 'fallbackUrl' : 'files/assets/230294033/1/draco.js', 'preload' : true},
 ];
