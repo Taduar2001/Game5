@@ -1,18 +1,22 @@
 <!doctype html>
 <html>
 <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
     <meta charset='utf-8'>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="manifest" href="manifest.json">
     <style></style>
-    <title>LoadModel</title>
+    <title>TestRequest</title>
     <script src="playcanvas-stable.min.js"></script>
+    <script src="engine-patch.js"></script>
     <script src="__settings__.js"></script>
 </head>
 <body>
-    <script src="__modules__.js"></script>
-    <script src="__start__.js"></script>
-    <script src="__loading__.js"></script>
+    <div id="playcanvas-wrapper" style="width:100%; height:300px; position: relative;">
+        <script src="__modules__.js?v=1.12"></script>
+        <script src="__start__.js"></script>
+        <script src="__loading__.js"></script>
+    </div>
+    
 </body>
 </html>
